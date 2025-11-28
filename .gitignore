@@ -1,0 +1,7 @@
+# Build artifacts
+*.zip
+temp_build/
+
+# IDE
+.idea/
+*.swp

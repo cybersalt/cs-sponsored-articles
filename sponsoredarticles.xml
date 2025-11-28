@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" type="plugin" group="system">
+    <name>PLG_SYSTEM_SPONSOREDARTICLES</name>
+    <author>CyberSalt</author>
+    <creationDate>November 2024</creationDate>
+    <copyright>(C) 2024 CyberSalt. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>1.0.0</version>
+    <description>PLG_SYSTEM_SPONSOREDARTICLES_XML_DESCRIPTION</description>
+    <namespace path="src">CyberSalt\Plugin\System\SponsoredArticles</namespace>
+    <files>
+        <folder plugin="sponsoredarticles">services</folder>
+        <folder>src</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/plg_system_sponsoredarticles.ini</language>
+        <language tag="en-GB">language/en-GB/plg_system_sponsoredarticles.sys.ini</language>
+    </languages>
+</extension>
