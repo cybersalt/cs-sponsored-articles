@@ -1,0 +1,79 @@
+<div class="changelog-container">
+    <h1>📋 CS Sponsored Articles - Changelog</h1>
+
+    <div class="intro">
+        <p><strong>All notable changes to CS Sponsored Articles will be documented in this file.</strong></p>
+    </div>
+
+    <h2>
+        <span class="version-badge">v1.1.2</span>
+        <span class="date">2025-12-01</span>
+    </h2>
+
+    <h3><span class="section-icon">🐛</span> Fixed</h3>
+    <ul>
+        <li><strong>Paginated pages bug</strong> - Last article on paginated pages no longer incorrectly receives sponsored styling</li>
+        <li><strong>Injected content issue</strong> - Resolved mismatched styling caused by injected content between article containers</li>
+        <li><strong>False positive matches</strong> - Fixed incorrect matches from sidebar links, tag clouds, and related article widgets</li>
+        <li><strong>Container detection</strong> - Completely rewrote algorithm using container boundary tracking</li>
+    </ul>
+
+    <h3><span class="section-icon">🔧</span> Changed</h3>
+    <ul>
+        <li><strong>Semantic link matching</strong> - Now only matches article title links with <code>itemprop="url"</code> attribute</li>
+        <li><strong>Simplified detection</strong> - Replaced regex-based container patterns with CSS class-based detection</li>
+        <li><strong>Performance improvement</strong> - Targets only the opening tag instead of matching entire container blocks</li>
+        <li><strong>Position handling</strong> - Process replacements from end to start to avoid position shifting issues</li>
+    </ul>
+
+    <h2>
+        <span class="version-badge">v1.1.0</span>
+        <span class="date">2025-11-27</span>
+    </h2>
+
+    <h3><span class="section-icon">🚀</span> Added</h3>
+    <ul>
+        <li><strong>Template Type selector</strong> - Plugin options now include Auto-detect, Cassiopeia, Template Creator CK, YooTheme, JoomlArt, Custom</li>
+        <li><strong>Custom Container Class</strong> - Option for templates not in the predefined list</li>
+        <li><strong>Template Creator CK support</strong> - Detects <code>tck-article</code> class</li>
+        <li><strong>YooTheme support</strong> - Detects <code>uk-article</code> class</li>
+        <li><strong>JoomlArt support</strong> - Detects <code>ja-item</code> and <code>ja-blog-item</code> classes</li>
+        <li><strong>ID-prefixed URLs</strong> - Support for article URLs like <code>/123-article-alias.html</code></li>
+    </ul>
+
+    <h3><span class="section-icon">🔧</span> Changed</h3>
+    <ul>
+        <li><strong>Field labels</strong> - Custom field group and field labels shortened to "Sponsored?"</li>
+        <li><strong>Frontend display</strong> - Custom field now defaults to hidden on frontend (Automatic Display = Do not display)</li>
+        <li><strong>Regex patterns</strong> - Improved patterns for more accurate blog item container matching</li>
+    </ul>
+
+    <h3><span class="section-icon">🐛</span> Fixed</h3>
+    <ul>
+        <li><strong>Field visibility</strong> - Field value (Yes/No) no longer displays on article frontend by default</li>
+        <li><strong>Multi-article detection</strong> - Correct article container detection when multiple articles on page</li>
+    </ul>
+
+    <h2>
+        <span class="version-badge">v1.0.0</span>
+        <span class="date">2025-11-27</span>
+    </h2>
+
+    <h3><span class="section-icon">🚀</span> Added</h3>
+    <ul>
+        <li><strong>Initial release</strong> - CS Sponsored Articles plugin for Joomla 5</li>
+        <li><strong>Custom field creation</strong> - Automatic creation of "Sponsored" custom field group and "Sponsored?" field on installation</li>
+        <li><strong>Switcher UI</strong> - Yes/No toggle field using Joomla's native switcher UI</li>
+        <li><strong>Auto-detection</strong> - Automatic detection of sponsored articles in blog views</li>
+        <li><strong>CSS class injection</strong> - Adds <code>cs-sponsored-item</code> CSS class to blog item containers for sponsored articles</li>
+        <li><strong>Configurable styling</strong> - Background color setting for sponsored articles (default: <code>#fff3cd</code>)</li>
+        <li><strong>Field hiding</strong> - CSS injection to hide the custom field value display on frontend</li>
+        <li><strong>Cassiopeia support</strong> - Support for Cassiopeia template blog layout</li>
+        <li><strong>Generic container support</strong> - Support for generic blog-item and article containers</li>
+        <li><strong>Joomla 5 Native</strong> - Modern plugin architecture with namespaces and dependency injection</li>
+    </ul>
+
+    <div class="footer">
+        <p>&copy; 2025 CyberSalt. All rights reserved.</p>
+    </div>
+</div>
