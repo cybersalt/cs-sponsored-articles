@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     CyberSalt\Plugin\System\SponsoredArticles
- * @copyright   Copyright (C) 2024 CyberSalt. All rights reserved.
+ * @copyright   Copyright (C) 2025 CyberSalt. All rights reserved.
  * @license     GNU General Public License version 2 or later
  */
 

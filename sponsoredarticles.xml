@@ -2,18 +2,48 @@
 <extension method="upgrade" type="plugin" group="system">
     <name>PLG_SYSTEM_SPONSOREDARTICLES</name>
     <author>CyberSalt</author>
-    <creationDate>November 2024</creationDate>
-    <copyright>(C) 2024 CyberSalt. All rights reserved.</copyright>
-    <license>GNU General Public License version 2 or later</license>
-    <version>1.0.0</version>
+    <creationDate>November 2025</creationDate>
+    <copyright>(C) 2025 CyberSalt. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE</license>
+    <version>1.1.2</version>
     <description>PLG_SYSTEM_SPONSOREDARTICLES_XML_DESCRIPTION</description>
     <namespace path="src">CyberSalt\Plugin\System\SponsoredArticles</namespace>
+    <scriptfile>script.php</scriptfile>
     <files>
         <folder plugin="sponsoredarticles">services</folder>
         <folder>src</folder>
+        <filename>script.php</filename>
     </files>
     <languages>
         <language tag="en-GB">language/en-GB/plg_system_sponsoredarticles.ini</language>
         <language tag="en-GB">language/en-GB/plg_system_sponsoredarticles.sys.ini</language>
     </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="background_color" type="color"
+                    default="#fff3cd"
+                    label="PLG_SYSTEM_SPONSOREDARTICLES_BACKGROUND_COLOR"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_BACKGROUND_COLOR_DESC" />
+
+                <field name="template_type" type="list"
+                    default="auto"
+                    label="PLG_SYSTEM_SPONSOREDARTICLES_TEMPLATE_TYPE"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_TEMPLATE_TYPE_DESC">
+                    <option value="auto">PLG_SYSTEM_SPONSOREDARTICLES_TEMPLATE_AUTO</option>
+                    <option value="cassiopeia">Cassiopeia</option>
+                    <option value="tck">Template Creator CK</option>
+                    <option value="yootheme">YooTheme</option>
+                    <option value="ja">JoomlArt (JA)</option>
+                    <option value="custom">PLG_SYSTEM_SPONSOREDARTICLES_TEMPLATE_CUSTOM</option>
+                </field>
+
+                <field name="custom_container_class" type="text"
+                    default=""
+                    label="PLG_SYSTEM_SPONSOREDARTICLES_CUSTOM_CLASS"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_CUSTOM_CLASS_DESC"
+                    showon="template_type:custom" />
+            </fieldset>
+        </fields>
+    </config>
 </extension>
