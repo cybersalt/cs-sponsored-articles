@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+    <changelog>
+        <element>plg_system_sponsoredarticles</element>
+        <type>plugin</type>
+        <version>1.1.2</version>
+        <fix>
+            <item>Fixed bug where last article on paginated pages could incorrectly receive sponsored styling</item>
+            <item>Resolved issue with injected content between article containers causing mismatched styling</item>
+            <item>Fixed false matches from sidebar links, tag clouds, and related article widgets</item>
+            <item>Completely rewrote container detection algorithm using container boundary tracking</item>
+        </fix>
+        <change>
+            <item>Now only matches article title links with itemprop="url" attribute (semantic article links)</item>
+            <item>Simplified code by replacing regex-based container patterns with CSS class-based detection</item>
+            <item>Improved performance by targeting only the opening tag instead of matching entire container blocks</item>
+            <item>Process replacements from end to start to avoid position shifting issues</item>
+        </change>
+    </changelog>
+    <changelog>
+        <element>plg_system_sponsoredarticles</element>
+        <type>plugin</type>
+        <version>1.1.0</version>
+        <addition>
+            <item>Template Type selector in plugin options (Auto-detect, Cassiopeia, Template Creator CK, YooTheme, JoomlArt, Custom)</item>
+            <item>Custom Container Class option for templates not in the list</item>
+            <item>Support for Template Creator CK (tck-article class)</item>
+            <item>Support for YooTheme (uk-article class)</item>
+            <item>Support for JoomlArt templates (ja-item, ja-blog-item classes)</item>
+            <item>Support for ID-prefixed article URLs (e.g., /123-article-alias.html)</item>
+        </addition>
+        <change>
+            <item>Custom field group and field labels shortened to "Sponsored?"</item>
+            <item>Custom field now defaults to hidden on frontend (Automatic Display = Do not display)</item>
+            <item>Improved regex patterns for more accurate blog item container matching</item>
+        </change>
+        <fix>
+            <item>Field value (Yes/No) no longer displays on article frontend by default</item>
+            <item>Correct article container detection when multiple articles on page</item>
+        </fix>
+    </changelog>
+    <changelog>
+        <element>plg_system_sponsoredarticles</element>
+        <type>plugin</type>
+        <version>1.0.0</version>
+        <addition>
+            <item>Initial release of CS Sponsored Articles plugin for Joomla 5</item>
+            <item>Automatic creation of "Sponsored" custom field group and "Sponsored?" field on installation</item>
+            <item>Yes/No toggle field using Joomla's native switcher UI</item>
+            <item>Automatic detection of sponsored articles in blog views</item>
+            <item>Adds cs-sponsored-item CSS class to blog item containers for sponsored articles</item>
+            <item>Configurable background color for sponsored articles (default: #fff3cd)</item>
+            <item>CSS injection to hide the custom field value display on frontend</item>
+            <item>Support for Cassiopeia template blog layout</item>
+            <item>Support for generic blog-item and article containers</item>
+            <item>Joomla 5 Native plugin architecture with namespaces and dependency injection</item>
+        </addition>
+    </changelog>
+</changelogs>
