@@ -45,6 +45,84 @@
                     description="PLG_SYSTEM_SPONSOREDARTICLES_CUSTOM_CLASS_DESC"
                     showon="template_type:custom" />
             </fieldset>
+
+            <fieldset name="styling" label="PLG_SYSTEM_SPONSOREDARTICLES_FIELDSET_STYLING">
+                <field name="styling_note" type="note"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_STYLING_NOTE" />
+
+                <field name="text_color" type="color"
+                    default=""
+                    label="PLG_SYSTEM_SPONSOREDARTICLES_TEXT_COLOR"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_TEXT_COLOR_DESC" />
+
+                <field name="border_color" type="color"
+                    default=""
+                    label="PLG_SYSTEM_SPONSOREDARTICLES_BORDER_COLOR"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_BORDER_COLOR_DESC" />
+
+                <field name="border_width" type="number"
+                    default=""
+                    min="0"
+                    max="20"
+                    step="1"
+                    hint="0"
+                    label="PLG_SYSTEM_SPONSOREDARTICLES_BORDER_WIDTH"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_BORDER_WIDTH_DESC" />
+
+                <field name="border_radius" type="number"
+                    default=""
+                    min="0"
+                    max="100"
+                    step="1"
+                    hint="0"
+                    label="PLG_SYSTEM_SPONSOREDARTICLES_BORDER_RADIUS"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_BORDER_RADIUS_DESC" />
+
+                <field name="padding" type="number"
+                    default=""
+                    min="0"
+                    max="100"
+                    step="1"
+                    hint="0"
+                    label="PLG_SYSTEM_SPONSOREDARTICLES_PADDING"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_PADDING_DESC" />
+
+                <field name="dark_background_color" type="color"
+                    default=""
+                    label="PLG_SYSTEM_SPONSOREDARTICLES_DARK_BACKGROUND_COLOR"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_DARK_BACKGROUND_COLOR_DESC" />
+
+                <field name="dark_text_color" type="color"
+                    default=""
+                    label="PLG_SYSTEM_SPONSOREDARTICLES_DARK_TEXT_COLOR"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_DARK_TEXT_COLOR_DESC" />
+
+                <field name="custom_css" type="textarea"
+                    default=""
+                    rows="10"
+                    cols="60"
+                    filter="raw"
+                    label="PLG_SYSTEM_SPONSOREDARTICLES_CUSTOM_CSS"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_CUSTOM_CSS_DESC" />
+            </fieldset>
+
+            <fieldset name="support" label="PLG_SYSTEM_SPONSOREDARTICLES_FIELDSET_SUPPORT">
+                <field name="support_email" type="email"
+                    default="support@cybersalt.com"
+                    label="PLG_SYSTEM_SPONSOREDARTICLES_SUPPORT_EMAIL"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_SUPPORT_EMAIL_DESC" />
+
+                <field name="support_url" type="url"
+                    default="https://www.cybersalt.com/services/support-request-form"
+                    validate="url"
+                    label="PLG_SYSTEM_SPONSOREDARTICLES_SUPPORT_URL"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_SUPPORT_URL_DESC" />
+
+                <field name="support_label" type="text"
+                    default="Cybersalt support"
+                    label="PLG_SYSTEM_SPONSOREDARTICLES_SUPPORT_LABEL"
+                    description="PLG_SYSTEM_SPONSOREDARTICLES_SUPPORT_LABEL_DESC" />
+            </fieldset>
         </fields>
     </config>
 </extension>

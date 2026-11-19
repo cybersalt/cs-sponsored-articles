@@ -2,6 +2,23 @@
 
 All notable changes to CS Sponsored Articles will be documented in this file.
 
+## [Unreleased]
+
+### 🚀 New
+- **Styling tab** - Optional text colour, border colour/width/radius and padding for sponsored articles. Every option is empty by default, so nothing changes on upgrade
+- **Custom CSS** - A Custom CSS box, added after the plugin's own styles so it wins
+- **Dark mode colours** - Optional dark-mode background and text colour, applied for dark-mode devices and dark Bootstrap themes
+- **Support settings** - Support email, URL and label (Cybersalt defaults) used in the "please contact" sentence the plugin shows
+
+### 🔧 Improvements
+- **Web Asset Manager** - The plugin's CSS is now added to the page head through Joomla's Web Asset Manager instead of by rewriting the page output
+
+### 🔍 Security
+- **Hardened output escaping** - Colour settings are validated and the styling output is escaped before it is written to the page
+
+### 🐛 Fixes
+- **Sponsored articles were never highlighted on stock Joomla 5.4 / 6 Cassiopeia** - Detection needed `itemprop="url"` on the title link, which core layouts no longer print. The article's own title or read-more link is now recognised in blog, featured and category list layouts, matched by the real article ID or alias (so `/news-archive` no longer matches an article called `news`). Links elsewhere on the page, such as sidebar or related-article links, are ignored, and a container is never marked twice. Templates that still print `itemprop="url"` keep working
+
 ## [1.1.2] - 2025-12-01
 
 ### 🐛 Fixed

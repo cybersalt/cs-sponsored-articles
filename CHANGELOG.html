@@ -6,6 +6,33 @@
     </div>
 
     <h2>
+        <span class="version-badge">Unreleased</span>
+    </h2>
+
+    <h3><span class="section-icon">🚀</span> New</h3>
+    <ul>
+        <li><strong>Styling tab</strong> - Optional text colour, border colour/width/radius and padding for sponsored articles. Every option is empty by default, so nothing changes on upgrade</li>
+        <li><strong>Custom CSS</strong> - A Custom CSS box, added after the plugin's own styles so it wins</li>
+        <li><strong>Dark mode colours</strong> - Optional dark-mode background and text colour, applied for dark-mode devices and dark Bootstrap themes</li>
+        <li><strong>Support settings</strong> - Support email, URL and label (Cybersalt defaults) used in the "please contact" sentence the plugin shows</li>
+    </ul>
+
+    <h3><span class="section-icon">🔧</span> Improvements</h3>
+    <ul>
+        <li><strong>Web Asset Manager</strong> - The plugin's CSS is now added to the page head through Joomla's Web Asset Manager instead of by rewriting the page output</li>
+    </ul>
+
+    <h3><span class="section-icon">🔍</span> Security</h3>
+    <ul>
+        <li><strong>Hardened output escaping</strong> - Colour settings are validated and the styling output is escaped before it is written to the page</li>
+    </ul>
+
+    <h3><span class="section-icon">🐛</span> Fixes</h3>
+    <ul>
+        <li><strong>Sponsored articles were never highlighted on stock Joomla 5.4 / 6 Cassiopeia</strong> - Detection needed <code>itemprop="url"</code> on the title link, which core layouts no longer print. The article's own title or read-more link is now recognised in blog, featured and category list layouts, matched by the real article ID or alias (so <code>/news-archive</code> no longer matches an article called <code>news</code>). Links elsewhere on the page, such as sidebar or related-article links, are ignored, and a container is never marked twice. Templates that still print <code>itemprop="url"</code> keep working</li>
+    </ul>
+
+    <h2>
         <span class="version-badge">v1.1.2</span>
         <span class="date">2025-12-01</span>
     </h2>

@@ -46,6 +46,9 @@ Access plugin settings via **System > Manage > Plugins** and search for "CS Spon
 | Option | Description | Default |
 |--------|-------------|---------|
 | Sponsored Background Color | The background color applied to sponsored article containers | #fff3cd (light yellow) |
+| Text / Border / Padding / Dark mode colours | Optional Styling tab options (empty = unchanged look) | empty |
+| Custom CSS | Your own CSS, added after the plugin styles | empty |
+| Support email / URL / label | Contact details used in messages | Cybersalt support |
 | Template Type | Select your template for optimal container detection | Auto-detect |
 | Custom Container Class | CSS class for custom templates (only when Template Type is "Custom") | - |
 

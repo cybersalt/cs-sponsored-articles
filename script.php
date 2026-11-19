@@ -28,11 +28,41 @@ class PlgSystemSponsoredarticlesInstallerScript
             try {
                 $this->createCustomField();
             } catch (\Exception $e) {
-                Log::add('Sponsored Articles: Failed to create custom field - ' . $e->getMessage(), Log::WARNING, 'jerror');
+                Log::add(
+                    'Sponsored Articles: Failed to create custom field - ' . $e->getMessage() . ' ' . $this->getContactSentence($parent),
+                    Log::WARNING,
+                    'jerror'
+                );
             }
         }
 
         return true;
+    }
+
+    /**
+     * Build the "please contact support" sentence for the installer's warning.
+     * Loads the plugin's helper straight from the installed files, because the plugin's
+     * namespace is not registered yet while the installer is still running.
+     *
+     * @param   InstallerAdapter  $parent  Parent installer
+     *
+     * @return  string
+     */
+    private function getContactSentence(InstallerAdapter $parent): string
+    {
+        try {
+            $helper = $parent->getParent()->getPath('extension_root') . '/src/Helper/SupportHelper.php';
+
+            if (is_file($helper)) {
+                require_once $helper;
+
+                return \CyberSalt\Plugin\System\SponsoredArticles\Helper\SupportHelper::getContactSentence();
+            }
+        } catch (\Throwable $e) {
+            // Fall through to the plain sentence
+        }
+
+        return 'Please contact Cybersalt support (support@cybersalt.com / https://www.cybersalt.com/services/support-request-form) for assistance.';
     }
 
     /**
